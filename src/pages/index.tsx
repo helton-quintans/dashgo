@@ -21,7 +21,6 @@ export default function SigIn() {
       >
         <Stack spacing="4">
           <Input name="email" type="email" label="Email" />
-
           <Input name="password" type="password" label="Senha" />
         </Stack>
 
