@@ -1,14 +1,8 @@
-import {
-  Button,
-  Flex,
-  Stack,
-  Input,
-  FormControl,
-  FormLabel,
-} from "@chakra-ui/react";
+import { Button, Flex, Stack } from "@chakra-ui/react";
+import { Input } from "../components/Form/Input";
 import { SubmitHandler, useForm } from "react-hook-form";
 
-export default function Home() {
+export default function SigIn() {
   const { register, handleSubmit, formState } = useForm({
     // resolver: yupResolver(signInFormSchema)
   });
@@ -26,28 +20,9 @@ export default function Home() {
         // onSubmit={handleSubmit(handleSignIn)}
       >
         <Stack spacing="4">
-          <FormControl>
-            <FormLabel>Email</FormLabel>
-            <Input
-              focusBorderColor="pink.500"
-              name="email"
-              type="email"
-              // label="E-mail"
-              // error={errors.email}
-              {...register("email")}
-            />
-          </FormControl>
-          <FormControl>
-            <FormLabel>Senha</FormLabel>
-            <Input
-              focusBorderColor="pink.500"
-              name="password"
-              type="password"
-              // label="Senha"
-              // error={errors.password}
-              {...register("password")}
-            />
-          </FormControl>
+          <Input name="email" type="email" label="Email" />
+
+          <Input name="password" type="password" label="Senha" />
         </Stack>
 
         <Button
