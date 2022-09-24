@@ -1,12 +1,13 @@
-<img alt="Ignite" src="https://i.imgur.com/eCVyxxy.png">
-<h2 align="center">
-  Ignite - Trilha ReactJS
-</h2>
+<p align="center">
+  <img alt="dashgo Mockup" src="https://github.com/EliasGcf/dashgo/raw/main/.github/mockup.png" width="100%">
+</p>
 <img alt="dashgo" src="https://i.imgur.com/yAyKn5v.png">
+
 
 ## Sobre o projeto
 
 O projeto foi baseado no 4º módulo da trilha ReactJS do Ignite. Além do que foi construído na [aula](https://github.com/GabriellArthur/DashGo), foi criado um banco de dados com o [Prisma](https://www.prisma.io), um CRUD de usuários e um sistema de autenticação baseado na [aula de autenticação e autorização](https://github.com/GabriellArthur/Autenticao-e-Autorizao-Reactjs).
+
 
 ## 🚀 Como executar
 
