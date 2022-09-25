@@ -17,6 +17,7 @@ import {
 } from "@chakra-ui/react";
 import { RiAddLine, RiPencilLine } from "react-icons/ri";
 import { Header } from "../../components/Header";
+import Pagination from "../../components/Pagination";
 import { Sidebar } from "../../components/Sidebar";
 
 export default function UserList() {
@@ -103,10 +104,62 @@ export default function UserList() {
                   </Button>
                 </Td>
               </Tr>
+              <Tr>
+                <Td px="6">
+                  <Checkbox colorScheme="pink" />
+                </Td>
+                <Td>
+                  <Box>
+                    <Text fontWeight="bold">Helton Quintãns</Text>
+                    <Text fontSize="small" color="gray.300">
+                      helton.quit@gmail.com
+                    </Text>
+                  </Box>
+                </Td>
+                <Td>24 de Setembro, 2022</Td>
+                <Td>
+                  <Button
+                    as="a"
+                    size="sm"
+                    fontSize="sm"
+                    colorScheme="cyan"
+                    leftIcon={<Icon as={RiPencilLine} fontSize="16" />}
+                  >
+                    Editar
+                  </Button>
+                </Td>
+              </Tr>
+              <Tr>
+                <Td px="6">
+                  <Checkbox colorScheme="pink" />
+                </Td>
+                <Td>
+                  <Box>
+                    <Text fontWeight="bold">Helton Quintãns</Text>
+                    <Text fontSize="small" color="gray.300">
+                      helton.quit@gmail.com
+                    </Text>
+                  </Box>
+                </Td>
+                <Td>24 de Setembro, 2022</Td>
+                <Td>
+                  <Button
+                    as="a"
+                    size="sm"
+                    fontSize="sm"
+                    colorScheme="cyan"
+                    leftIcon={<Icon as={RiPencilLine} fontSize="16" />}
+                  >
+                    Editar
+                  </Button>
+                </Td>
+              </Tr>
 
               {/* //! Mocked */}
             </Tbody>
           </Table>
+
+          <Pagination />
         </Box>
       </Flex>
     </Box>
