@@ -80,7 +80,25 @@ export default function Dashboard() {
             p="8"
             bg="gray.800"
             borderRadius={8}
-            // pb="4"
+            pb="8"
+          >
+            <Text fontSize="lg" mb="4">
+              Taxa de abertura
+            </Text>
+            <Chart options={options} series={series2} type="area" height={160} />
+          </Box>
+          <Box p="8" bg="gray.800" borderRadius={8} pb="4">
+            <Text fontSize="lg" mb="4">
+              Inscritos da semana
+            </Text>
+            <Chart options={options} series={series1} type="area" height={160} />
+          </Box>
+
+          <Box
+            p="8"
+            bg="gray.800"
+            borderRadius={8}
+            pb="8"
           >
             <Text fontSize="lg" mb="4">
               Taxa de abertura
