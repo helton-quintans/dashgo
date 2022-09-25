@@ -21,43 +21,44 @@ const options = {
     show: false,
   },
   dataLabels: {
-    enable: false,
+    enabled: false,
   },
-  stroke: {
-    curve: "smooth",
-  },
+  
   tooltip: {
     enabled: false,
   },
-  xaxis: {
-    type: "datetime",
-    axisBorder: {
-      color: theme.colors.gray[600],
-    },
-    axisTicks: {
-      color: theme.colors.gray[600],
-    },
-    categories: [
-      "2022-09-18T00:00:000Z",
-      "2022-09-19T00:00:000Z",
-      "2022-09-20T00:00:000Z",
-      "2022-09-21T00:00:000Z",
-      "2022-09-22T00:00:000Z",
-      "2022-09-23T00:00:000Z",
-      "2022-09-24T00:00:000Z",
-    ],
-  },
+  // xaxis: {
+  //   type: "datetime",
+  //   axisBorder: {
+  //     color: theme.colors.gray[600]
+  //   },
+  //   axisTicks: {
+  //     color: theme.colors.gray[600]
+  //   },
+  //   categories: [
+  //     "2022-09-18T00:00:000Z",
+  //     "2022-09-19T00:00:000Z",
+  //     "2022-09-20T00:00:000Z",
+  //     "2022-09-21T00:00:000Z",
+  //     "2022-09-22T00:00:000Z",
+  //     "2022-09-23T00:00:000Z",
+  //     "2022-09-24T00:00:000Z",
+  //   ],
+  // },
   fill: {
     opacity: 0.3,
+    colors:['#f411fc', '#9C27B0'],
     type: "gradient",
     gradiente:{
-      shade: "dark"
+      shade: "dark",
+      opacityFrom: 0.7,
+      opacityTo: 0.3,
     }
   }
 };
 
 const series1 = [{ name: "series", data: [31, 65, 10, 120, 1, 33, 22] }];
-const series2 = [{ name: "series", data: [31, 300, , 90, 22, 400, 800] }];
+const series2 = [{ name: "series", data: [31, 2000, , 90, 1000, 400, 800] }];
 
 export default function Dashboard() {
   return (
