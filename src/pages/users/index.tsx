@@ -43,7 +43,7 @@ export default function UserList() {
                 colorScheme="pink"
                 leftIcon={<Icon as={RiAddLine} fontSize="20" />}
               >
-                Criar novo usuário
+                Criar usuário
               </Button>
             </Link>
           </Flex>
