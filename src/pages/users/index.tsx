@@ -73,7 +73,7 @@ export default function UserList() {
                   </Box>
                 </Td>
                 {isWideVersion && <Td>24 de Setembro, 2022</Td>}
-                <Td>
+                {/* <Td>
                   <Button
                     as="a"
                     size="sm"
@@ -83,7 +83,7 @@ export default function UserList() {
                   >
                     {isWideVersion ? "Editar" : ""}
                   </Button>
-                </Td>
+                </Td> */}
               </Tr>
               <Tr>
                 <Td px={["4", "4", "6"]}>
@@ -98,7 +98,7 @@ export default function UserList() {
                   </Box>
                 </Td>
                 {isWideVersion && <Td>24 de Setembro, 2022</Td>}
-                <Td>
+                {/* <Td>
                   <Button
                     as="a"
                     size="sm"
@@ -108,7 +108,7 @@ export default function UserList() {
                   >
                     {isWideVersion ? "Editar" : ""}
                   </Button>
-                </Td>
+                </Td> */}
               </Tr>
               <Tr>
                 <Td px={["4", "4", "6"]}>
@@ -123,7 +123,7 @@ export default function UserList() {
                   </Box>
                 </Td>
                 {isWideVersion && <Td>24 de Setembro, 2022</Td>}
-                <Td>
+                {/* <Td>
                   <Button
                     as="a"
                     size="sm"
@@ -133,7 +133,7 @@ export default function UserList() {
                   >
                     {isWideVersion ? "Editar" : ""}
                   </Button>
-                </Td>
+                </Td> */}
               </Tr>
               <Tr>
                 <Td px={["4", "4", "6"]}>
@@ -148,7 +148,7 @@ export default function UserList() {
                   </Box>
                 </Td>
                 {isWideVersion && <Td>24 de Setembro, 2022</Td>}
-                <Td>
+                {/* <Td>
                   <Button
                     as="a"
                     size="sm"
@@ -158,7 +158,7 @@ export default function UserList() {
                   >
                     {isWideVersion ? "Editar" : ""}
                   </Button>
-                </Td>
+                </Td> */}
               </Tr>
 
               {/* //! Mocked */}
