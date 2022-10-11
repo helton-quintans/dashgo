@@ -13,6 +13,7 @@ import {
   Tr,
   Text,
   useBreakpointValue,
+  Spinner,
 } from "@chakra-ui/react";
 import Link from "next/link";
 import { useEffect } from "react";
@@ -24,14 +25,12 @@ import Pagination from "../../components/Pagination";
 import { Sidebar } from "../../components/Sidebar";
 
 export default function UserList() {
-  const query = useQuery("users", async () => {
+  const { data, isLoading, error } = useQuery("users", async () => {
     const response = await fetch("http://localhost:3000/api/users");
     const data = await response.json();
 
     return data;
-  })
-
-  console.log(query)
+  });
 
   const isWideVersion = useBreakpointValue({
     base: false,
@@ -66,7 +65,17 @@ export default function UserList() {
             </Link>
           </Flex>
 
-          <Table colorScheme="whiteAlpha">
+          { isLoading ? (
+            <Flex justify="center">
+              <Spinner />
+            </Flex>
+          ) : error ? (
+            <Flex justify="center">
+              <Text> Flaha ao carregar os dados</Text>
+            </Flex>
+          ) : (
+            <>
+            <Table colorScheme="whiteAlpha">
             <Thead>
               <Tr>
                 <Th px={["4", "4", "6"]} color="gray.300" width="8">
@@ -77,7 +86,6 @@ export default function UserList() {
               </Tr>
             </Thead>
             <Tbody>
-              {/* //! Mocked */}
               <Tr>
                 <Td px={["4", "4", "6"]}>
                   <Checkbox colorScheme="pink" />
@@ -103,87 +111,14 @@ export default function UserList() {
                   </Button>
                 </Td> */}
               </Tr>
-              <Tr>
-                <Td px={["4", "4", "6"]}>
-                  <Checkbox colorScheme="pink" />
-                </Td>
-                <Td>
-                  <Box>
-                    <Text fontWeight="bold">Helton Quintãns</Text>
-                    <Text fontSize="small" color="gray.300">
-                      helton.quit@gmail.com
-                    </Text>
-                  </Box>
-                </Td>
-                {isWideVersion && <Td>24 de Setembro, 2022</Td>}
-                {/* <Td>
-                  <Button
-                    as="a"
-                    size="sm"
-                    fontSize="sm"
-                    colorScheme="cyan"
-                    leftIcon={<Icon as={RiPencilLine} fontSize="16" />}
-                  >
-                    {isWideVersion ? "Editar" : ""}
-                  </Button>
-                </Td> */}
-              </Tr>
-              <Tr>
-                <Td px={["4", "4", "6"]}>
-                  <Checkbox colorScheme="pink" />
-                </Td>
-                <Td>
-                  <Box>
-                    <Text fontWeight="bold">Helton Quintãns</Text>
-                    <Text fontSize="small" color="gray.300">
-                      helton.quit@gmail.com
-                    </Text>
-                  </Box>
-                </Td>
-                {isWideVersion && <Td>24 de Setembro, 2022</Td>}
-                {/* <Td>
-                  <Button
-                    as="a"
-                    size="sm"
-                    fontSize="sm"
-                    colorScheme="cyan"
-                    leftIcon={<Icon as={RiPencilLine} fontSize="16" />}
-                  >
-                    {isWideVersion ? "Editar" : ""}
-                  </Button>
-                </Td> */}
-              </Tr>
-              <Tr>
-                <Td px={["4", "4", "6"]}>
-                  <Checkbox colorScheme="pink" />
-                </Td>
-                <Td>
-                  <Box>
-                    <Text fontWeight="bold">Helton Quintãns</Text>
-                    <Text fontSize="small" color="gray.300">
-                      helton.quit@gmail.com
-                    </Text>
-                  </Box>
-                </Td>
-                {isWideVersion && <Td>24 de Setembro, 2022</Td>}
-                {/* <Td>
-                  <Button
-                    as="a"
-                    size="sm"
-                    fontSize="sm"
-                    colorScheme="cyan"
-                    leftIcon={<Icon as={RiPencilLine} fontSize="16" />}
-                  >
-                    {isWideVersion ? "Editar" : ""}
-                  </Button>
-                </Td> */}
-              </Tr>
-
-              {/* //! Mocked */}
             </Tbody>
           </Table>
 
           <Pagination />
+          </>
+          )}
+
+        
         </Box>
       </Flex>
     </Box>
