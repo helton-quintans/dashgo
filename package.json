@@ -22,14 +22,15 @@
     "react-dom": "18.2.0",
     "react-hook-form": "^7.36.0",
     "react-icons": "^4.4.0",
+    "react-query": "^3.39.2",
     "yup": "^0.32.11"
   },
   "devDependencies": {
+    "@faker-js/faker": "^7.5.0",
     "@types/node": "^18.7.19",
     "@types/react": "^18.0.21",
     "eslint": "8.23.1",
     "eslint-config-next": "12.3.1",
-    "faker": "^5.5.3",
     "miragejs": "^0.1.45",
     "typescript": "^4.8.3"
   }
