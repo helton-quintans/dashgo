@@ -3,6 +3,7 @@ import { Input } from "../components/Form/Input";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { SubmitHandler, useForm } from "react-hook-form";
+import Link from "next/link";
 
 type SignInFormData = {
   email: string;
@@ -54,6 +55,7 @@ export default function SigIn() {
           />
         </Stack>
 
+        <Link href="/dashboard">
         <Button
           type="submit"
           mt="6"
@@ -63,6 +65,7 @@ export default function SigIn() {
         >
           Entrar
         </Button>
+        </Link>
       </Flex>
     </Flex>
   );
